@@ -12,22 +12,72 @@
 </head>
 
 <body>
+    <h1> <b>Kill</b>.<b class="red">Blood</b>.<b class="gold">Loot</b></h1>
+    <div class="player-panel">
+        <div id="player-1" class="player-container player-active">
+            <img id="player-1-d-none"class="player-img animation" src="./img/shield.png">
+            <img id="player-1-gameover" class="player-img d-none animation" src="./img/gameover.png">
+            <span id="player-1-color" class="player-font">Vikings</span>
+        </div>
+        <div id="player-2" class="player-container player-inactive">
+            <img id="player-2-d-none" class="player-img animation" src="./img/cross.png">
+            <img id="player-2-gameover" class="player-img d-none animation" src="./img/gameover.png">
+            <span id="player-2-color" class="player-font">Christians</span>
+        </div>
+    </div>
+
+    <div id="line-1" class="horizontal-line" style="top: 644px;"></div>
+    <div id="line-2" class="horizontal-line" style="top: 784px;"></div>
+    <div id="line-3" class="horizontal-line" style="top: 924px;"></div>
+    <div id="line-4" class="vertikal-line" style="left: 392px"></div>
+    <div id="line-5" class="vertikal-line" style="left: 533px"></div>
+    <div id="line-6" class="vertikal-line" style="left: 672px"></div>
+    <div id="line-7" class="diagonal-line" style="transform: rotate(135deg) scaleX(0.0);"></div>
+    <div id="line-8" class="diagonal-line" style="transform: rotate(45deg) scaleX(0.0);"></div>
+
     <div>
         <table>
             <tr>
-                <td><img class="shape" src="./img/shield.png"><img class="shape" src="./img/cross.png"></td>
-                <td><img class="shape" src="./img/shield.png"><img class="shape" src="./img/cross.png"></td>
-                <td><img class="shape" src="./img/shield.png"><img class="shape" src="./img/cross.png"></td>
+                <td onclick="fillShape(0)">
+                    <img id="circle-0" class="shape d-none" src="./img/shield.png">
+                    <img id="cross-0" class="shape d-none" src="./img/cross.png">
+                </td>
+                <td onclick="fillShape(1)">
+                    <img id="circle-1" class="shape d-none" src="./img/shield.png">
+                    <img id="cross-1" class="shape d-none" src="./img/cross.png">
+                </td>
+                <td onclick="fillShape(2)">
+                    <img id="circle-2" class="shape d-none" src="./img/shield.png">
+                    <img id="cross-2" class="shape d-none" src="./img/cross.png">
+                </td>
             </tr>
             <tr>
-                <td><img class="shape" src="./img/shield.png"><img class="shape" src="./img/cross.png"></td>
-                <td><img class="shape" src="./img/shield.png"><img class="shape" src="./img/cross.png"></td>
-                <td><img class="shape" src="./img/shield.png"><img class="shape" src="./img/cross.png"></td>
+                <td onclick="fillShape(3)">
+                    <img id="circle-3" class="shape d-none" src="./img/shield.png">
+                    <img id="cross-3" class="shape d-none" src="./img/cross.png">
+                </td>
+                <td onclick="fillShape(4)">
+                    <img id="circle-4" class="shape d-none" src="./img/shield.png">
+                    <img id="cross-4" class="shape d-none" src="./img/cross.png">
+                </td>
+                <td onclick="fillShape(5)">
+                    <img id="circle-5" class="shape d-none" src="./img/shield.png">
+                    <img id="cross-5" class="shape d-none" src="./img/cross.png">
+                </td>
             </tr>
             <tr>
-                <td><img class="shape" src="./img/shield.png"><img class="shape" src="./img/cross.png"></td>
-                <td><img class="shape" src="./img/shield.png"><img class="shape" src="./img/cross.png"></td>
-                <td><img class="shape" src="./img/shield.png"><img class="shape" src="./img/cross.png"></td>
+                <td onclick="fillShape(6)">
+                    <img id="circle-6" class="shape d-none" src="./img/shield.png">
+                    <img id="cross-6" class="shape d-none" src="./img/cross.png">
+                </td>
+                <td onclick="fillShape(7)">
+                    <img id="circle-7" class="shape d-none" src="./img/shield.png">
+                    <img id="cross-7" class="shape d-none" src="./img/cross.png">
+                </td>
+                <td onclick="fillShape(8)">
+                    <img id="circle-8" class="shape d-none" src="./img/shield.png">
+                    <img id="cross-8" class="shape d-none" src="./img/cross.png">
+                </td>
             </tr>
         </table>
     </div>
@@ -36,6 +86,7 @@
             Flaticon</a>
         <a href="https://www.flaticon.com/free-icons/cross" title="cross icons">Cross icons created by Vitaly Gorbachev
             - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/skull" title="skull icons">Skull icons created by Smashicons - Flaticon</a>
     </footer>
 </body>
 
