@@ -15,27 +15,28 @@
     <h1> <b>Kill</b>.<b class="red">Blood</b>.<b class="gold">Loot</b></h1>
     <div class="player-panel">
         <div id="player-1" class="player-container player-active">
-            <img id="player-1-d-none"class="player-img animation" src="./img/shield.png">
+            <img id="player-1-d-none"class="player-img animation" src="./img/viking.png">
             <img id="player-1-gameover" class="player-img d-none animation" src="./img/gameover.png">
             <span id="player-1-color" class="player-font">Vikings</span>
         </div>
         <div id="player-2" class="player-container player-inactive">
-            <img id="player-2-d-none" class="player-img animation" src="./img/cross.png">
+            <img id="player-2-d-none" class="player-img animation" src="./img/knight.png">
             <img id="player-2-gameover" class="player-img d-none animation" src="./img/gameover.png">
             <span id="player-2-color" class="player-font">Christians</span>
         </div>
     </div>
 
-    <div id="line-1" class="horizontal-line" style="top: 644px;"></div>
-    <div id="line-2" class="horizontal-line" style="top: 784px;"></div>
-    <div id="line-3" class="horizontal-line" style="top: 924px;"></div>
-    <div id="line-4" class="vertikal-line" style="left: 392px"></div>
-    <div id="line-5" class="vertikal-line" style="left: 533px"></div>
-    <div id="line-6" class="vertikal-line" style="left: 672px"></div>
-    <div id="line-7" class="diagonal-line" style="transform: rotate(135deg) scaleX(0.0);"></div>
-    <div id="line-8" class="diagonal-line" style="transform: rotate(45deg) scaleX(0.0);"></div>
+    
 
-    <div>
+    <div class="position-relative">
+        <div id="line-1" class="horizontal-line" style="top: 62px;"></div>
+    <div id="line-2" class="horizontal-line" style="top: 202px;"></div>
+    <div id="line-3" class="horizontal-line" style="top: 342px;"></div>
+    <div id="line-4" class="vertikal-line" style="left: 61px"></div>
+    <div id="line-5" class="vertikal-line" style="left: 201px"></div>
+    <div id="line-6" class="vertikal-line" style="left: 341px"></div>
+    <div id="line-7" class="diagonal-line" style="transform: rotate(135deg) scaleX(0);"></div>
+    <div id="line-8" class="diagonal-line" style="transform: rotate(45deg) scaleX(0);"></div>
         <table>
             <tr>
                 <td onclick="fillShape(0)">
@@ -81,12 +82,18 @@
             </tr>
         </table>
     </div>
+    <div>
+        <button onclick="restart()" id="restart" class="restart-btn d-none animation"></button>
+    </div>
     <footer>
+        <a href="https://www.flaticon.com/free-icons/viking" title="viking icons">Viking icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/knight" title="knight icons">Knight icons created by Freepik - Flaticon</a>
         <a href="https://www.flaticon.com/free-icons/shield" title="shield icons">Shield icons created by Freepik -
             Flaticon</a>
         <a href="https://www.flaticon.com/free-icons/cross" title="cross icons">Cross icons created by Vitaly Gorbachev
             - Flaticon</a>
             <a href="https://www.flaticon.com/free-icons/skull" title="skull icons">Skull icons created by Smashicons - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/viking" title="viking icons">Viking icons created by Freepik - Flaticon</a>
     </footer>
 </body>
 

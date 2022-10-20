@@ -79,7 +79,7 @@ a {
 .horizontal-line {
     position: absolute;
     height: 10px;
-    width: 400px;
+    width: 415px;
     border-radius: 10px;
     background-color: rgb(192, 41, 41);
     transform: scaleX(0.0);
@@ -88,7 +88,7 @@ a {
 
 .vertikal-line {
     position: absolute;
-    top: 589px;
+    top: 6px;
     height: 400px;
     width: 10px;
     border-radius: 10px;
@@ -99,7 +99,8 @@ a {
 
 .diagonal-line {
     position: absolute;
-    top: 510px;
+    top: -71px;
+    left: 201px;
     height: 556px;
     width: 10px;
     border-radius: 10px;
@@ -121,6 +122,28 @@ a {
     display: none;
 }
 
+.restart-btn {
+    
+    margin-top: 60px;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    background-image: url(./img/restart.png);
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(197, 191, 191);
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.restart-btn:hover {
+    transform: scale(1.1);
+    background-color:  rgb(212, 212, 212);;
+}
+
 footer {
     position: absolute;
     display: flex;
@@ -128,13 +151,18 @@ footer {
     align-items: center;
     flex-direction: column;
     bottom: 0;
-    height: 100px;
+    height: 140px;
     width: 100%;
     background-color: gray;
 }
 
 table {
     border-collapse: collapse;
+    
+}
+
+.position-relative {
+    position: relative;
 }
 
 tr {

@@ -90,6 +90,7 @@ function checkForWin() {
             document.getElementById('player-1').classList.remove('player-inactive');
             document.getElementById('player-1').classList.add('player-active','gold');
             AUDIO_WAR.play();
+            document.getElementById('restart').classList.remove('d-none');
 
         }
         if (winner === 'cross') {
@@ -100,6 +101,31 @@ function checkForWin() {
             document.getElementById('player-2').classList.remove('player-inactive');
             document.getElementById('player-2').classList.add('player-active','gold');
             AUDIO_CHRISTIAN.play();
+            document.getElementById('restart').classList.remove('d-none');
         }
+    }
+}
+
+function restart() {
+    gameOver = false;
+    fields = [];
+    currentShape = 'cross'
+    document.getElementById('restart').classList.add('d-none');
+    document.getElementById('player-1-gameover').classList.add('d-none');
+    document.getElementById('player-2-gameover').classList.add('d-none');
+    document.getElementById('player-1').classList.remove('player-active','player-inactive','gold','red');
+    document.getElementById('player-1').classList.add('player-active');
+    document.getElementById('player-2').classList.remove('player-active','player-inactive','gold','red');
+    document.getElementById('player-2').classList.add('player-inactive');
+    document.getElementById('player-1-d-none').classList.remove('d-none');
+    document.getElementById('player-2-d-none').classList.remove('d-none');
+
+
+    for(i = 1; i < 9; i++){
+        document.getElementById('line-' + i).classList.add('d-none');
+    }
+    for(i = 0; i < 9; i++){
+        document.getElementById('circle-' + i).classList.add('d-none');
+        document.getElementById('cross-' + i).classList.add('d-none');
     }
 }
