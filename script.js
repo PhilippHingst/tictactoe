@@ -1,6 +1,7 @@
 let fields = [];
 let gameOver = false;
 let currentShape = 'cross'
+let winner;
 
 let AUDIO_VIKING = new Audio('audio/screamingPeople.wav');
 let AUDIO_WAR = new Audio('audio/drumOfWar.wav');
@@ -49,9 +50,26 @@ function draw() {
 }
 
 function checkForWin() {
-    let winner;
-    // horizontale Siegmöglichkeiten / Wie kann man diese IF-Abfragen in eine gesonderte Funktion einfügen? Für besseren Clean Code.
-    // Bekomme in gesonderten Functions den Wert von "Fields" und "Winner" nicht zurück.
+    
+    horizontalWinCondition();
+    verticalWinCondition();
+    diagonalWinCondition();
+
+    if (fields[0] && fields[1] && fields[2] && fields[3] && fields[4] && fields[5] && fields[6] && fields[7] && fields[8]) { // Abbruchbedingung
+        document.getElementById('restart').classList.remove('d-none'); 
+    }
+    if (winner) {
+        gameOver = true;
+        if (winner === 'circle') {
+            playerOneWinClassesToggle();
+        }
+        if (winner === 'cross') {
+            playerTwoWinClassesToggle();
+        }
+    }
+}
+
+function horizontalWinCondition() {
     if (fields[0] == fields[1] && fields[1] == fields[2] && fields[0]) {
         winner = fields[0];
         document.getElementById('line-1').style.transform = 'scaleX(1)'
@@ -64,8 +82,9 @@ function checkForWin() {
         winner = fields[6];
         document.getElementById('line-3').style.transform = 'scaleX(1)'
     }
-    // vertikale Siegmöglichkeiten / Wie kann man diese IF-Abfragen in eine gesonderte Funktion einfügen? Für besseren Clean Code.
-    // Bekomme in gesonderten Functions den Wert von "Fields" und "Winner" nicht zurück.
+}
+
+function verticalWinCondition() {
     if (fields[0] == fields[3] && fields[3] == fields[6] && fields[0]) {
         winner = fields[0];
         document.getElementById('line-4').style.transform = 'scaleX(1)'
@@ -78,8 +97,9 @@ function checkForWin() {
         winner = fields[2];
         document.getElementById('line-6').style.transform = 'scaleX(1)'
     }
-    // diagonale Siegmöglichkeiten / Wie kann man diese IF-Abfragen in eine gesonderte Funktion einfügen? Für besseren Clean Code.
-    // Bekomme in gesonderten Functions den Wert von "Fields" und "Winner" nicht zurück.
+}
+
+function diagonalWinCondition() {
     if (fields[0] == fields[4] && fields[4] == fields[8] && fields[0]) {
         winner = fields[0];
         document.getElementById('line-7').style.transform = 'rotate(135deg) scaleX(1)'
@@ -87,20 +107,6 @@ function checkForWin() {
     if (fields[2] == fields[4] && fields[4] == fields[6] && fields[2]) {
         winner = fields[2];
         document.getElementById('line-8').style.transform = 'rotate(45deg) scaleX(1)'
-    }
-    // Abbruchbedingung
-    if (fields[0] && fields[1] && fields[2] && fields[3] && fields[4] && fields[5] && fields[6] && fields[7] && fields[8]) {
-        document.getElementById('restart').classList.remove('d-none');
-    }
-    if (winner) {
-        console.log('Gewonnen:', winner);
-        gameOver = true;
-        if (winner === 'circle') {
-            playerOneWinClassesToggle();
-        }
-        if (winner === 'cross') {
-            playerTwoWinClassesToggle();
-        }
     }
 }
 
