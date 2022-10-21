@@ -15,7 +15,7 @@ h1 {
 }
 
 .red {
-    color:rgb(187, 9, 9);
+    color: rgb(187, 9, 9);
     transition: ease-in-out 125ms;
 }
 
@@ -32,6 +32,7 @@ a {
 .player-panel {
     display: flex;
     margin-bottom: 100px;
+    margin-top: 250px;
 }
 
 .player-font {
@@ -71,13 +72,15 @@ a {
     from {
         transform: scale(0);
     }
+
     to {
         transform: scale(1)
     }
 }
 
-.horizontal-line {
+.horizontal-line1 {
     position: absolute;
+    top: 62px;
     height: 10px;
     width: 415px;
     border-radius: 10px;
@@ -86,8 +89,31 @@ a {
     transition: 225ms ease-in-out;
 }
 
-.vertikal-line {
+.horizontal-line2 {
     position: absolute;
+    top: 202px;
+    height: 10px;
+    width: 415px;
+    border-radius: 10px;
+    background-color: rgb(192, 41, 41);
+    transform: scaleX(0.0);
+    transition: 225ms ease-in-out;
+}
+
+.horizontal-line3 {
+    position: absolute;
+    top: 342px;
+    height: 10px;
+    width: 415px;
+    border-radius: 10px;
+    background-color: rgb(192, 41, 41);
+    transform: scaleX(0.0);
+    transition: 225ms ease-in-out;
+}
+
+.vertikal-line1 {
+    position: absolute;
+    left: 61px;
     top: 6px;
     height: 400px;
     width: 10px;
@@ -97,7 +123,42 @@ a {
     transition: 225ms ease-in-out;
 }
 
-.diagonal-line {
+.vertikal-line2 {
+    position: absolute;
+    left: 201px;
+    top: 6px;
+    height: 400px;
+    width: 10px;
+    border-radius: 10px;
+    background-color: rgb(192, 41, 41);
+    transform: scaleX(0.0);
+    transition: 225ms ease-in-out;
+}
+
+.vertikal-line3 {
+    position: absolute;
+    left: 341px;
+    top: 6px;
+    height: 400px;
+    width: 10px;
+    border-radius: 10px;
+    background-color: rgb(192, 41, 41);
+    transform: scaleX(0.0);
+    transition: 225ms ease-in-out;
+}
+
+.diagonal-line1 {
+    position: absolute;
+    top: -71px;
+    left: 201px;
+    height: 556px;
+    width: 10px;
+    border-radius: 10px;
+    background-color: rgb(192, 41, 41);
+    transition: 225ms ease-in-out;
+}
+
+.diagonal-line2 {
     position: absolute;
     top: -71px;
     left: 201px;
@@ -123,7 +184,7 @@ a {
 }
 
 .restart-btn {
-    
+
     margin-top: 60px;
     height: 100px;
     width: 100px;
@@ -141,24 +202,25 @@ a {
 
 .restart-btn:hover {
     transform: scale(1.1);
-    background-color:  rgb(212, 212, 212);;
+    background-color: rgb(212, 212, 212);
+    ;
 }
 
 footer {
-    position: absolute;
+    margin-top: 300px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     bottom: 0;
-    height: 140px;
     width: 100%;
     background-color: gray;
 }
 
 table {
     border-collapse: collapse;
-    
+
 }
 
 .position-relative {
@@ -201,4 +263,233 @@ table tr:last-child td {
 
 table tr td:last-child {
     border-right: 0;
+}
+
+@media(max-width:460px) {
+    body {
+        justify-content: flex-start;
+    }
+
+    .player-panel {
+        margin-top: 200px;
+    }
+    footer {
+        height: 400px;
+    }
+
+    td {
+        height: 110px;
+        width: 110px;
+    }
+
+    .horizontal-line1 {
+        width: 350px;
+        top: 54px;
+    }
+
+    .horizontal-line2 {
+        width: 350px;
+        top: 170px;
+    }
+
+    .horizontal-line3 {
+        width: 350px;
+        top: 288px;
+    }
+
+    .vertikal-line1 {
+        height: 337px;
+        left: 52px;
+    }
+
+    .vertikal-line2 {
+        height: 337px;
+        left: 169px;
+    }
+
+    .vertikal-line3 {
+        height: 337px;
+        left: 286px;
+    }
+
+    .diagonal-line1 {
+        top: -54px;
+        left: 169px;
+        height: 457px;
+    }
+
+    .diagonal-line2 {
+        top: -54px;
+        left: 169px;
+        height: 457px;
+    }
+
+    .shape {
+        height: 75px;
+        width: 75px;
+        top: 20px;
+        bottom: 0;
+        right: 0;
+        left: 20px;
+    }
+
+    .player-img {
+        height: 120px;
+    }
+
+    .player-font {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+}
+
+@media(max-width:401px) {
+    footer {
+        height: 400px;
+    }
+
+    td {
+        height: 90px;
+        width: 90px;
+    }
+
+    .horizontal-line1 {
+        width: 296px;
+        top: 43px;
+    }
+
+    .horizontal-line2 {
+        width: 296px;
+        top: 138px;
+    }
+
+    .horizontal-line3 {
+        width: 296px;
+        top: 237px;
+    }
+
+    .vertikal-line1 {
+        height: 279px;
+        left: 42px;
+    }
+
+    .vertikal-line2 {
+        height: 279px;
+        left: 139px;
+    }
+
+    .vertikal-line3 {
+        height: 279px;
+        left: 236px;
+    }
+
+    .diagonal-line1 {
+        top: -42px;
+        left: 138px;
+        height: 376px;
+    }
+
+    .diagonal-line2 {
+        top: -42px;
+        left: 138px;
+        height: 376px;
+    }
+
+    .shape {
+        height: 65px;
+        width: 65px;
+        top: 15px;
+        bottom: 0;
+        right: 0;
+        left: 15px;
+    }
+
+    .player-img {
+        height: 100px;
+    }
+
+    .player-font {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+}
+
+@media(max-width:360px) {
+    footer {
+        height: 400px;
+    }
+
+    td {
+        height: 90px;
+        width: 90px;
+    }
+
+    .horizontal-line1 {
+        width: 296px;
+        top: 43px;
+    }
+
+    .horizontal-line2 {
+        width: 296px;
+        top: 138px;
+    }
+
+    .horizontal-line3 {
+        width: 296px;
+        top: 237px;
+    }
+
+    .vertikal-line1 {
+        height: 279px;
+        left: 42px;
+    }
+
+    .vertikal-line2 {
+        height: 279px;
+        left: 139px;
+    }
+
+    .vertikal-line3 {
+        height: 279px;
+        left: 236px;
+    }
+
+    .diagonal-line1 {
+        top: -42px;
+        left: 138px;
+        height: 376px;
+    }
+
+    .diagonal-line2 {
+        top: -42px;
+        left: 138px;
+        height: 376px;
+    }
+
+    .shape {
+        height: 65px;
+        width: 65px;
+        top: 15px;
+        bottom: 0;
+        right: 0;
+        left: 15px;
+    }
+
+    .player-img {
+        height: 100px;
+    }
+
+    .player-font {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
 }
